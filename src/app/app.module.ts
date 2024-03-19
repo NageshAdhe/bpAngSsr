@@ -6,6 +6,11 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { TroveModule } from '../@trove/trove.module';
 import { LayoutModule } from './layout/layout.module';
+import { FuseMockApiModule } from '../@trove/lib/mock-api';
+import { mockApiServices } from './mock-api';
+import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,11 +18,15 @@ import { LayoutModule } from './layout/layout.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     // CommonModule,
     AppRoutingModule,
-    // Trove, TroveConfig 
+  // Trove, TroveConfig 
     TroveModule,   
-    LayoutModule,
+    LayoutModule,    
+    FuseMockApiModule.forRoot(mockApiServices),
+    CoreModule
   ],
   providers: [
     // provideClientHydration(),

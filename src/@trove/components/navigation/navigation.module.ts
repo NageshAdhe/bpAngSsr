@@ -7,26 +7,26 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 // import { FuseScrollbarModule } from '@fuse/directives/scrollbar/public-api';
-// import { FuseHorizontalNavigationBasicItemComponent } from './horizontal/components/basic/basic.component';
-// import { FuseHorizontalNavigationBranchItemComponent } from './horizontal/components/branch/branch.component';
-// import { FuseHorizontalNavigationDividerItemComponent } from './horizontal/components/divider/divider.component';
-// import { FuseHorizontalNavigationSpacerItemComponent } from './horizontal/components/spacer/spacer.component';
-// import { FuseHorizontalNavigationComponent } from './horizontal/horizontal.component';
-import { FuseVerticalNavigationAsideItemComponent } from './vertical/components/aside/aside.component';
-import { FuseVerticalNavigationBasicItemComponent } from './vertical/components/basic/basic.component';
-import { FuseVerticalNavigationCollapsableItemComponent } from './vertical/components/collapsable/collapsable.component';
-import { FuseVerticalNavigationDividerItemComponent } from './vertical/components/divider/divider.component';
-import { FuseVerticalNavigationGroupItemComponent } from './vertical/components/group/group.component';
-import { FuseVerticalNavigationSpacerItemComponent } from './vertical/components/spacer/spacer.component';
-import { FuseVerticalNavigationComponent } from './vertical/vertical.component';
+import { FuseHorizontalNavigationBasicItemComponent } from '../navigation/horizontal/components/basic/basic.component';
+import { FuseHorizontalNavigationBranchItemComponent } from '../navigation/horizontal/components/branch/branch.component';
+import { FuseHorizontalNavigationDividerItemComponent } from '../navigation/horizontal/components/divider/divider.component';
+import { FuseHorizontalNavigationSpacerItemComponent } from '../navigation/horizontal/components/spacer/spacer.component';
+import { FuseHorizontalNavigationComponent } from '../navigation/horizontal/horizontal.component';
+import { FuseVerticalNavigationAsideItemComponent } from '../navigation/vertical/components/aside/aside.component';
+import { FuseVerticalNavigationBasicItemComponent } from '../navigation/vertical/components/basic/basic.component';
+import { FuseVerticalNavigationCollapsableItemComponent } from '../navigation/vertical/components/collapsable/collapsable.component';
+import { FuseVerticalNavigationDividerItemComponent } from '../navigation/vertical/components/divider/divider.component';
+import { FuseVerticalNavigationGroupItemComponent } from '../navigation/vertical/components/group/group.component';
+import { FuseVerticalNavigationSpacerItemComponent } from '../navigation/vertical/components/spacer/spacer.component';
+import { FuseVerticalNavigationComponent } from '../navigation/vertical/vertical.component';
 
 @NgModule({
     declarations: [
-        // FuseHorizontalNavigationBasicItemComponent,
-        // FuseHorizontalNavigationBranchItemComponent,
-        // FuseHorizontalNavigationDividerItemComponent,
-        // FuseHorizontalNavigationSpacerItemComponent,
-        // FuseHorizontalNavigationComponent,
+        FuseHorizontalNavigationBasicItemComponent,
+        FuseHorizontalNavigationBranchItemComponent,
+        FuseHorizontalNavigationDividerItemComponent,
+        FuseHorizontalNavigationSpacerItemComponent,
+        FuseHorizontalNavigationComponent,
         FuseVerticalNavigationAsideItemComponent,
         FuseVerticalNavigationBasicItemComponent,
         FuseVerticalNavigationCollapsableItemComponent,
@@ -46,7 +46,7 @@ import { FuseVerticalNavigationComponent } from './vertical/vertical.component';
         // FuseScrollbarModule
     ],
     exports     : [
-        // FuseHorizontalNavigationComponent,
+        FuseHorizontalNavigationComponent,
         FuseVerticalNavigationComponent
     ]
 })
