@@ -1,9 +1,9 @@
 /* eslint-disable */
-// import { FuseNavigationItem } from '@fuse/components/navigation';
+// import { TroveNavigationItem } from '../components/navigation';
 
-import { FuseNavigationItem } from "../../../../@trove/components/navigation";
+import { TroveNavigationItem } from "../../../../@trove/components/navigation";
 
-export const defaultNavigation: FuseNavigationItem[] = [
+export const defaultNavigation: TroveNavigationItem[] = [
     {
         id      : 'dashboards',
         title   : 'Dashboards',
@@ -705,11 +705,11 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link : '/ui/material-components'
             },
             {
-                id   : 'user-interface.fuse-components',
-                title: 'Fuse Components',
+                id   : 'user-interface.Trove-components',
+                title: 'Trove Components',
                 type : 'basic',
                 icon : 'heroicons_outline:chip',
-                link : '/ui/fuse-components'
+                link : '/ui/Trove-components'
             },
             {
                 id   : 'user-interface.other-components',
@@ -972,7 +972,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
     {
         id      : 'documentation',
         title   : 'Documentation',
-        subtitle: 'Everything you need to know about Fuse',
+        subtitle: 'Everything you need to know about Trove',
         type    : 'group',
         icon    : 'heroicons_outline:support',
         children: [
@@ -1154,7 +1154,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         ]
     }
 ];
-export const compactNavigation: FuseNavigationItem[] = [
+export const compactNavigation: TroveNavigationItem[] = [
     {
         id      : 'dashboards',
         title   : 'Dashboards',
@@ -1196,7 +1196,7 @@ export const compactNavigation: FuseNavigationItem[] = [
         children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
     }
 ];
-export const futuristicNavigation: FuseNavigationItem[] = [
+export const futuristicNavigation: TroveNavigationItem[] = [
     {
         id      : 'dashboards',
         title   : 'DASHBOARDS',
@@ -1236,7 +1236,7 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
     }
 ];
-export const horizontalNavigation: FuseNavigationItem[] = [
+export const horizontalNavigation: TroveNavigationItem[] = [
     {
         id      : 'dashboards',
         title   : 'Dashboards',

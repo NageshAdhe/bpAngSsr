@@ -2,23 +2,23 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy
 import { IsActiveMatchOptions } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { FuseVerticalNavigationComponent } from '../../../vertical/vertical.component';
-import { FuseNavigationService } from '../../../navigation.service';
-import { FuseNavigationItem } from '../../../navigation.types';
-import { FuseUtilsService } from '../../../../../services/utils/utils.service';
+import { TroveVerticalNavigationComponent } from '../../../vertical/vertical.component';
+import { TroveNavigationService } from '../../../navigation.service';
+import { TroveNavigationItem } from '../../../navigation.types';
+import { TroveUtilsService } from '../../../../../services/utils/utils.service';
 
 @Component({
-    selector       : 'fuse-vertical-navigation-basic-item',
+    selector       : 'trove-vertical-navigation-basic-item',
     templateUrl    : './basic.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FuseVerticalNavigationBasicItemComponent implements OnInit, OnDestroy
+export class TroveVerticalNavigationBasicItemComponent implements OnInit, OnDestroy
 {
-    // @Input() item: FuseNavigationItem;
+    // @Input() item: TroveNavigationItem;
     // @Input() name: string;
 
     isActiveMatchOptions: IsActiveMatchOptions;
-    // private _fuseVerticalNavigationComponent: FuseVerticalNavigationComponent;s
+    // private _troveVerticalNavigationComponent: TroveVerticalNavigationComponent;s
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     /**
@@ -26,15 +26,15 @@ export class FuseVerticalNavigationBasicItemComponent implements OnInit, OnDestr
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseNavigationService: FuseNavigationService,
-        private _fuseUtilsService: FuseUtilsService
+        private _troveNavigationService: TroveNavigationService,
+        private _troveUtilsService: TroveUtilsService
     )
     {
         // Set the equivalent of {exact: false} as default for active match options.
         // We are not assigning the item.isActiveMatchOptions directly to the
         // [routerLinkActiveOptions] because if it's "undefined" initially, the router
         // will throw an error and stop working.
-        this.isActiveMatchOptions = this._fuseUtilsService.subsetMatchOptions;
+        this.isActiveMatchOptions = this._troveUtilsService.subsetMatchOptions;
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -51,17 +51,17 @@ export class FuseVerticalNavigationBasicItemComponent implements OnInit, OnDestr
         // item's "exactMatch" option
         // this.isActiveMatchOptions =
         //     this.item.isActiveMatchOptions ?? this.item.exactMatch
-        //         ? this._fuseUtilsService.exactMatchOptions
-        //         : this._fuseUtilsService.subsetMatchOptions;
+        //         ? this._troveUtilsService.exactMatchOptions
+        //         : this._troveUtilsService.subsetMatchOptions;
 
         // Get the parent navigation component
-        // this._fuseVerticalNavigationComponent = this._fuseNavigationService.getComponent(this.name);
+        // this._troveVerticalNavigationComponent = this._troveNavigationService.getComponent(this.name);
 
         // Mark for check
         this._changeDetectorRef.markForCheck();
 
         // Subscribe to onRefreshed on the navigation component
-        // this._fuseVerticalNavigationComponent.onRefreshed.pipe(
+        // this._troveVerticalNavigationComponent.onRefreshed.pipe(
         //     takeUntil(this._unsubscribeAll)
         // ).subscribe(() => {
 

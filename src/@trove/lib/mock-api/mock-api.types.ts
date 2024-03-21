@@ -1,11 +1,11 @@
 import { HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export type FuseMockApiReplyCallback =
+export type TroveMockApiReplyCallback =
     | ((data: { request: HttpRequest<any>; urlParams: { [key: string]: string } }) => ([number, string | any]) | Observable<any>)
     | undefined;
 
-export type FuseMockApiMethods =
+export type TroveMockApiMethods =
     | 'get'
     | 'post'
     | 'patch'

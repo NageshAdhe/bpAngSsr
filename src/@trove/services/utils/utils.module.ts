@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { FuseUtilsService } from '@fuse/services/utils/utils.service';
+import { TroveUtilsService } from '../../services/utils/utils.service';
 
 @NgModule({
     providers: [
-        FuseUtilsService
+        TroveUtilsService
     ]
 })
-export class FuseUtilsModule
+export class TroveUtilsModule
 {
     /**
      * Constructor
      */
-    constructor(private _fuseUtilsService: FuseUtilsService)
+    constructor(private _troveUtilsService: TroveUtilsService)
     {
     }
 }

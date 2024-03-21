@@ -1,9 +1,9 @@
-import { FuseNavigationItem } from '../../../@trove/components/navigation';
+import { TroveNavigationItem } from '../../../@trove/components/navigation';
 
 export interface Navigation
 {
-    compact?: FuseNavigationItem[];
-    default?: FuseNavigationItem[];
-    futuristic?: FuseNavigationItem[];
-    horizontal: FuseNavigationItem[];
+    compact?: TroveNavigationItem[];
+    default?: TroveNavigationItem[];
+    futuristic?: TroveNavigationItem[];
+    horizontal: TroveNavigationItem[];
 }

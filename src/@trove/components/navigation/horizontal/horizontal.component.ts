@@ -1,23 +1,23 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { ReplaySubject, Subject } from 'rxjs';
-// import { fuseAnimations } from '@fuse/animations';
-import { FuseNavigationItem } from '../../navigation/navigation.types';
-import { FuseNavigationService } from '../../navigation/navigation.service';
-import { FuseUtilsService } from '../../../services/utils/utils.service';
+// import { troveAnimations } from '../animations';
+import { TroveNavigationItem } from '../../navigation/navigation.types';
+import { TroveNavigationService } from '../../navigation/navigation.service';
+import { TroveUtilsService } from '../../../services/utils/utils.service';
 
 @Component({
-    selector       : 'fuse-horizontal-navigation',
+    selector       : 'trove-horizontal-navigation',
     templateUrl    : './horizontal.component.html',
     styleUrls      : ['./horizontal.component.scss'],
-    // animations     : fuseAnimations,
+    // animations     : troveAnimations,
     encapsulation  : ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    exportAs       : 'fuseHorizontalNavigation'
+    exportAs       : 'troveHorizontalNavigation'
 })
-export class FuseHorizontalNavigationComponent implements OnChanges, OnInit, OnDestroy
+export class TroveHorizontalNavigationComponent implements OnChanges, OnInit, OnDestroy
 {
-    @Input() name: string = this._fuseUtilsService.randomId();
-    @Input() navigation!: FuseNavigationItem[];
+    @Input() name: string = this._troveUtilsService.randomId();
+    @Input() navigation!: TroveNavigationItem[];
 
     onRefreshed: ReplaySubject<boolean> = new ReplaySubject<boolean>(1);
     private _unsubscribeAll: Subject<any> = new Subject<any>();
@@ -27,8 +27,8 @@ export class FuseHorizontalNavigationComponent implements OnChanges, OnInit, OnD
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseNavigationService: FuseNavigationService,
-        private _fuseUtilsService: FuseUtilsService
+        private _troveNavigationService: TroveNavigationService,
+        private _troveUtilsService: TroveUtilsService
     )
     {
     }
@@ -60,11 +60,11 @@ export class FuseHorizontalNavigationComponent implements OnChanges, OnInit, OnD
         // Make sure the name input is not an empty string
         if ( this.name === '' )
         {
-            this.name = this._fuseUtilsService.randomId();
+            this.name = this._troveUtilsService.randomId();
         }
 
         // Register the navigation component
-        this._fuseNavigationService.registerComponent(this.name, this);
+        this._troveNavigationService.registerComponent(this.name, this);
     }
 
     /**
@@ -73,7 +73,7 @@ export class FuseHorizontalNavigationComponent implements OnChanges, OnInit, OnD
     ngOnDestroy(): void
     {
         // Deregister the navigation component from the registry
-        this._fuseNavigationService.deregisterComponent(this.name);
+        this._troveNavigationService.deregisterComponent(this.name);
 
         // Unsubscribe from all subscriptions
         // this._unsubscribeAll.next();

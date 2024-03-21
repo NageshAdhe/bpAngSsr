@@ -5,9 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-// import { FuseFullscreenModule } from '@fuse/components/fullscreen';
-// import { FuseLoadingBarModule } from '@fuse/components/loading-bar';
-import { FuseNavigationModule } from '../../../../../@trove/components/navigation/navigation.module';
+// import { TroveFullscreenModule } from '@trove/components/fullscreen';
+// import { TroveLoadingBarModule } from '@trove/components/loading-bar';
+import {TroveNavigationModule } from '../../../../../@trove/components/navigation/navigation.module';
 // import { LanguagesModule } from 'app/layout/common/languages/languages.module';
 // import { MessagesModule } from 'app/layout/common/messages/messages.module';
 // import { NotificationsModule } from 'app/layout/common/notifications/notifications.module';
@@ -31,9 +31,9 @@ import { CommonModule } from '@angular/common';
         MatDividerModule,
         MatIconModule,
         MatMenuModule,
-        // FuseFullscreenModule,
-        // FuseLoadingBarModule,
-        FuseNavigationModule,
+        // TroveFullscreenModule,
+        // TroveLoadingBarModule,
+        TroveNavigationModule,
         // LanguagesModule,
         // MessagesModule,
         // NotificationsModule,

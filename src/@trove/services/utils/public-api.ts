@@ -1,2 +1,2 @@
-export * from '@fuse/services/utils/utils.module';
-export * from '@fuse/services/utils/utils.service';
+export * from '../../services/utils/utils.module';
+export * from '../../services/utils/utils.service';

@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { FuseAnimationCurves, FuseAnimationDurations } from '@fuse/animations/defaults';
+import { TroveAnimationCurves, TroveAnimationDurations } from '../animations/defaults';
 
 // -----------------------------------------------------------------------------------------------------
 // @ Fade in
@@ -25,7 +25,7 @@ const fadeIn = trigger('fadeIn',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -58,7 +58,7 @@ const fadeInTop = trigger('fadeInTop',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -91,7 +91,7 @@ const fadeInBottom = trigger('fadeInBottom',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -124,7 +124,7 @@ const fadeInLeft = trigger('fadeInLeft',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -157,7 +157,7 @@ const fadeInRight = trigger('fadeInRight',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -188,7 +188,7 @@ const fadeOut = trigger('fadeOut',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )
@@ -221,7 +221,7 @@ const fadeOutTop = trigger('fadeOutTop',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )
@@ -254,7 +254,7 @@ const fadeOutBottom = trigger('fadeOutBottom',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )
@@ -287,7 +287,7 @@ const fadeOutLeft = trigger('fadeOutLeft',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )
@@ -320,7 +320,7 @@ const fadeOutRight = trigger('fadeOutRight',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )

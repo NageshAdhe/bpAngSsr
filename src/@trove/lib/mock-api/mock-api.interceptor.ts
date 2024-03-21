@@ -2,20 +2,20 @@ import { Inject, Injectable } from '@angular/core';
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, switchMap } from 'rxjs/operators';
-import { FUSE_MOCK_API_DEFAULT_DELAY } from '../../lib/mock-api/mock-api.constants';
-import { FuseMockApiService } from '../../lib/mock-api/mock-api.service';
+import { TROVE_MOCK_API_DEFAULT_DELAY } from '../../lib/mock-api/mock-api.constants';
+import { TroveMockApiService } from '../../lib/mock-api/mock-api.service';
 
 @Injectable({
     providedIn: 'root'
 })
-export class FuseMockApiInterceptor implements HttpInterceptor
+export class TroveMockApiInterceptor implements HttpInterceptor
 {
     /**
      * Constructor
      */
     constructor(
-        @Inject(FUSE_MOCK_API_DEFAULT_DELAY) private _defaultDelay: number,
-        private _fuseMockApiService: FuseMockApiService
+        @Inject(TROVE_MOCK_API_DEFAULT_DELAY) private _defaultDelay: number,
+        private _troveMockApiService: TroveMockApiService
     )
     {
     }
@@ -32,7 +32,7 @@ export class FuseMockApiInterceptor implements HttpInterceptor
         const {
                   handler,
                   urlParams
-              } = this._fuseMockApiService.findHandler(request.method.toUpperCase(), request.url);
+              } = this._troveMockApiService.findHandler(request.method.toUpperCase(), request.url);
 
         // Pass through if the request handler does not exist
         if ( !handler )

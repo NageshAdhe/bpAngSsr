@@ -3,16 +3,16 @@ import { NavigationEnd, Router } from '@angular/router';
 import { BooleanInput } from '@angular/cdk/coercion';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
-import { FuseVerticalNavigationComponent } from '../../vertical.component';
-import { FuseNavigationService } from '../../../navigation.service';
-import { FuseNavigationItem } from '../../../navigation.types';
+import { TroveVerticalNavigationComponent } from '../../vertical.component';
+import { TroveNavigationService } from '../../../navigation.service';
+import { TroveNavigationItem } from '../../../navigation.types';
 
 @Component({
-    selector       : 'fuse-vertical-navigation-aside-item',
+    selector       : 'trove-vertical-navigation-aside-item',
     templateUrl    : './aside.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FuseVerticalNavigationAsideItemComponent implements OnChanges, OnInit, OnDestroy
+export class TroveVerticalNavigationAsideItemComponent implements OnChanges, OnInit, OnDestroy
 {
     /* eslint-disable @typescript-eslint/naming-convention */
     static ngAcceptInputType_autoCollapse: BooleanInput;
@@ -21,12 +21,12 @@ export class FuseVerticalNavigationAsideItemComponent implements OnChanges, OnIn
 
     // @Input() activeItemId: string;
     // @Input() autoCollapse: boolean;
-    // @Input() item: FuseNavigationItem;
+    // @Input() item: TroveNavigationItem;
     // @Input() name: string;
     // @Input() skipChildren: boolean;
 
     active: boolean = false;
-    // private _fuseVerticalNavigationComponent: FuseVerticalNavigationComponent;
+    // private _troveVerticalNavigationComponent: TroveVerticalNavigationComponent;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     /**
@@ -35,7 +35,7 @@ export class FuseVerticalNavigationAsideItemComponent implements OnChanges, OnIn
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
         private _router: Router,
-        private _fuseNavigationService: FuseNavigationService
+        private _troveNavigationService: TroveNavigationService
     )
     {
     }
@@ -80,10 +80,10 @@ export class FuseVerticalNavigationAsideItemComponent implements OnChanges, OnIn
             });
 
         // Get the parent navigation component
-        // this._fuseVerticalNavigationComponent = this._fuseNavigationService.getComponent(this.name);
+        // this._troveVerticalNavigationComponent = this._troveNavigationService.getComponent(this.name);
 
         // Subscribe to onRefreshed on the navigation component
-        // this._fuseVerticalNavigationComponent.onRefreshed.pipe(
+        // this._troveVerticalNavigationComponent.onRefreshed.pipe(
         //     takeUntil(this._unsubscribeAll)
         // ).subscribe(() => {
 
@@ -129,7 +129,7 @@ export class FuseVerticalNavigationAsideItemComponent implements OnChanges, OnIn
      * @param currentUrl
      * @private
      */
-    private _hasActiveChild(item: FuseNavigationItem, currentUrl: string): boolean
+    private _hasActiveChild(item: TroveNavigationItem, currentUrl: string): boolean
     {
         const children = item.children;
 

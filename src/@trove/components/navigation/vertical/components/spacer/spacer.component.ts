@@ -1,21 +1,21 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { FuseVerticalNavigationComponent } from '../../../..//navigation/vertical/vertical.component';
-import { FuseNavigationService } from '../../../..//navigation/navigation.service';
-import { FuseNavigationItem } from '../../../..//navigation/navigation.types';
+import { TroveVerticalNavigationComponent } from '../../../..//navigation/vertical/vertical.component';
+import { TroveNavigationService } from '../../../..//navigation/navigation.service';
+import { TroveNavigationItem } from '../../../..//navigation/navigation.types';
 
 @Component({
-    selector       : 'fuse-vertical-navigation-spacer-item',
+    selector       : 'trove-vertical-navigation-spacer-item',
     templateUrl    : './spacer.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FuseVerticalNavigationSpacerItemComponent implements OnInit, OnDestroy
+export class TroveVerticalNavigationSpacerItemComponent implements OnInit, OnDestroy
 {
-    // @Input() item: FuseNavigationItem;
+    // @Input() item: TroveNavigationItem;
     // @Input() name: string;
 
-    // private _fuseVerticalNavigationComponent: FuseVerticalNavigationComponent;
+    // private _troveVerticalNavigationComponent: TroveVerticalNavigationComponent;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     /**
@@ -23,7 +23,7 @@ export class FuseVerticalNavigationSpacerItemComponent implements OnInit, OnDest
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseNavigationService: FuseNavigationService
+        private _troveNavigationService: TroveNavigationService
     )
     {
     }
@@ -38,10 +38,10 @@ export class FuseVerticalNavigationSpacerItemComponent implements OnInit, OnDest
     ngOnInit(): void
     {
         // Get the parent navigation component
-        // this._fuseVerticalNavigationComponent = this._fuseNavigationService.getComponent(this.name);
+        // this._troveVerticalNavigationComponent = this._troveNavigationService.getComponent(this.name);
 
         // Subscribe to onRefreshed on the navigation component
-        // this._fuseVerticalNavigationComponent.onRefreshed.pipe(
+        // this._troveVerticalNavigationComponent.onRefreshed.pipe(
         //     takeUntil(this._unsubscribeAll)
         // ).subscribe(() => {
 

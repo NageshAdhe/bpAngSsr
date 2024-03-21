@@ -4,7 +4,7 @@ import { IsActiveMatchOptions } from '@angular/router';
 @Injectable({
     providedIn: 'root'
 })
-export class FuseUtilsService
+export class TroveUtilsService
 {
     /**
      * Constructor

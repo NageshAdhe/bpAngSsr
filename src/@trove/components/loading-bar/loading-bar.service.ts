@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
-export class FuseLoadingBarService
+export class TroveLoadingBarService
 {
     private _auto$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
     private _mode$: BehaviorSubject<'determinate' | 'indeterminate'> = new BehaviorSubject<'determinate' | 'indeterminate'>('indeterminate');

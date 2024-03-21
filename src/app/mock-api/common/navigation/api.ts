@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
 import { compactNavigation, defaultNavigation, futuristicNavigation, horizontalNavigation } from '../../../mock-api/common/navigation/data';
-import { FuseMockApiService } from '../../../../@trove/lib/mock-api';
-import { FuseNavigationItem } from '../../../../@trove/components/navigation';
+import { TroveMockApiService } from '../../../../@trove/lib/mock-api';
+import { TroveNavigationItem } from '../../../../@trove/components/navigation';
 
 @Injectable({
     providedIn: 'root'
 })
 export class NavigationMockApi
 {
-    private readonly _compactNavigation: FuseNavigationItem[] = compactNavigation;
-    private readonly _defaultNavigation: FuseNavigationItem[] = defaultNavigation;
-    private readonly _futuristicNavigation: FuseNavigationItem[] = futuristicNavigation;
-    private readonly _horizontalNavigation: FuseNavigationItem[] = horizontalNavigation;
+    private readonly _compactNavigation: TroveNavigationItem[] = compactNavigation;
+    private readonly _defaultNavigation: TroveNavigationItem[] = defaultNavigation;
+    private readonly _futuristicNavigation: TroveNavigationItem[] = futuristicNavigation;
+    private readonly _horizontalNavigation: TroveNavigationItem[] = horizontalNavigation;
 
     /**
      * Constructor
      */
-    constructor(private _fuseMockApiService: FuseMockApiService)
+    constructor(private _troveMockApiService: TroveMockApiService)
     {
         // Register Mock API handlers
         this.registerHandlers();
@@ -35,7 +35,7 @@ export class NavigationMockApi
         // -----------------------------------------------------------------------------------------------------
         // @ Navigation - GET
         // -----------------------------------------------------------------------------------------------------
-        this._fuseMockApiService
+        this._troveMockApiService
             .onGet('api/common/navigation')
             .reply(() => {
 

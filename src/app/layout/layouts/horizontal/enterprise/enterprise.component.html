@@ -6,14 +6,14 @@
         <div class="relative dark flex flex-auto justify-center w-full px-4 md:px-8 bg-gray-800 dark:bg-gray-900">
             <div class="flex items-center w-full max-w-360 h-16 sm:h-20">
                 <!-- Logo -->
-                <!-- <ng-container *ngIf="!isScreenSmall">
+                <ng-container *ngIf="!isScreenSmall">
                     <div class="flex items-center">
                         <img
                             class="w-24"
-                            src="assets/images/logo/logo-text-on-dark.svg"
+                            src="../../../../../assets/images/logo/logo-text-on-dark.svg"
                             alt="Logo image">
                     </div>
-                </ng-container> -->
+                </ng-container>
                 <!-- Navigation toggle button -->
                 <!-- <ng-container *ngIf="isScreenSmall">
                     <button
@@ -25,7 +25,7 @@
                 <!-- Components -->
                 <!-- <div class="flex items-center pl-2 ml-auto space-x-0.5 sm:space-x-2">
                     <languages></languages>
-                    <fuse-fullscreen class="hidden md:block"></fuse-fullscreen>
+                    <trove-fullscreen class="hidden md:block"></trove-fullscreen>
                     <search [appearance]="'bar'"></search>
                     <shortcuts></shortcuts>
                     <messages></messages>
@@ -44,10 +44,10 @@
         <ng-container *ngIf="!isScreenSmall">
             <div class="flex flex-auto justify-center px-4 md:px-8 bg-card dark:bg-gray-700">
                 <div class="relative flex items-center w-full max-w-360 h-16">
-                    <fuse-horizontal-navigation
+                    <trove-horizontal-navigation
                         class="-mx-4"
                         [name]="'mainNavigation'"
-                        [navigation]="navigation.horizontal"></fuse-horizontal-navigation>
+                        [navigation]="navigation.horizontal"></trove-horizontal-navigation>
                 </div>
             </div>
         </ng-container>
@@ -65,7 +65,7 @@
     <!-- Footer -->
     <div class="relative flex flex-0 justify-center w-full px-6 md:px-8 z-49 border-t bg-card print:hidden">
         <div class="flex items-center w-full max-w-360 h-14 sm:h-20">
-            <span class="font-medium text-secondary">Fuse &copy; </span>
+            <span class="font-medium text-secondary">Test &copy; </span>
         </div>
     </div>
 

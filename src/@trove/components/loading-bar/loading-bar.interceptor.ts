@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-import { FuseLoadingBarService } from '../../components/loading-bar/loading-bar.service';
+import { TroveLoadingBarService } from '../../components/loading-bar/loading-bar.service';
 
 @Injectable()
-export class FuseLoadingBarInterceptor implements HttpInterceptor
+export class TroveLoadingBarInterceptor implements HttpInterceptor
 {
     handleRequestsAutomatically!: boolean;
 
@@ -13,11 +13,11 @@ export class FuseLoadingBarInterceptor implements HttpInterceptor
      * Constructor
      */
     constructor(
-        private _fuseLoadingBarService: FuseLoadingBarService
+        private _troveLoadingBarService: TroveLoadingBarService
     )
     {
         // Subscribe to the auto
-        this._fuseLoadingBarService.auto$
+        this._troveLoadingBarService.auto$
             .subscribe((value) => {
                 this.handleRequestsAutomatically = value;
             });
@@ -38,12 +38,12 @@ export class FuseLoadingBarInterceptor implements HttpInterceptor
         }
 
         // Set the loading status to true
-        this._fuseLoadingBarService._setLoadingStatus(true, req.url);
+        this._troveLoadingBarService._setLoadingStatus(true, req.url);
 
         return next.handle(req).pipe(
             finalize(() => {
                 // Set the status to false if there are any errors or the request is completed
-                this._fuseLoadingBarService._setLoadingStatus(false, req.url);
+                this._troveLoadingBarService._setLoadingStatus(false, req.url);
             }));
     }
 }

@@ -1,30 +1,30 @@
 import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FUSE_MOCK_API_DEFAULT_DELAY } from '../../lib/mock-api/mock-api.constants';
-import { FuseMockApiInterceptor } from '../../lib/mock-api/mock-api.interceptor';
+import { TROVE_MOCK_API_DEFAULT_DELAY } from '../../lib/mock-api/mock-api.constants';
+import { TroveMockApiInterceptor } from '../../lib/mock-api/mock-api.interceptor';
 
 @NgModule({
     providers: [
         {
             provide : HTTP_INTERCEPTORS,
-            useClass: FuseMockApiInterceptor,
+            useClass: TroveMockApiInterceptor,
             multi   : true
         }
     ]
 })
-export class FuseMockApiModule
+export class TroveMockApiModule
 {
     /**
-     * FuseMockApi module default configuration.
+     * TroveMockApi module default configuration.
      *
      * @param mockApiServices - Array of services that register mock API handlers
      * @param config - Configuration options
      * @param config.delay - Default delay value in milliseconds to apply all responses
      */
-    static forRoot(mockApiServices: any[], config?: { delay?: number }): ModuleWithProviders<FuseMockApiModule>
+    static forRoot(mockApiServices: any[], config?: { delay?: number }): ModuleWithProviders<TroveMockApiModule>
     {
         return {
-            ngModule : FuseMockApiModule,
+            ngModule : TroveMockApiModule,
             providers: [
                 {
                     provide   : APP_INITIALIZER,
@@ -33,7 +33,7 @@ export class FuseMockApiModule
                     multi     : true
                 },
                 {
-                    provide : FUSE_MOCK_API_DEFAULT_DELAY,
+                    provide : TROVE_MOCK_API_DEFAULT_DELAY,
                     useValue: config?.delay ?? 0
                 }
             ]

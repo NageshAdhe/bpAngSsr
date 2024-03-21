@@ -2,26 +2,26 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy
 import { BooleanInput } from '@angular/cdk/coercion';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { FuseVerticalNavigationComponent } from '../../../..//navigation/vertical/vertical.component';
-import { FuseNavigationService } from '../../../..//navigation/navigation.service';
-import { FuseNavigationItem } from '../../../../navigation/navigation.types';
+import { TroveVerticalNavigationComponent } from '../../../..//navigation/vertical/vertical.component';
+import { TroveNavigationService } from '../../../..//navigation/navigation.service';
+import { TroveNavigationItem } from '../../../../navigation/navigation.types';
 
 @Component({
-    selector       : 'fuse-vertical-navigation-group-item',
+    selector       : 'trove-vertical-navigation-group-item',
     templateUrl    : './group.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FuseVerticalNavigationGroupItemComponent implements OnInit, OnDestroy
+export class TroveVerticalNavigationGroupItemComponent implements OnInit, OnDestroy
 {
     /* eslint-disable @typescript-eslint/naming-convention */
     static ngAcceptInputType_autoCollapse: BooleanInput;
     /* eslint-enable @typescript-eslint/naming-convention */
 
     // @Input() autoCollapse: boolean;
-    // @Input() item: FuseNavigationItem;
+    // @Input() item: TroveNavigationItem;
     // @Input() name: string;
 
-    // private _fuseVerticalNavigationComponent: FuseVerticalNavigationComponent;
+    // private _troveVerticalNavigationComponent: TroveVerticalNavigationComponent;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     /**
@@ -29,7 +29,7 @@ export class FuseVerticalNavigationGroupItemComponent implements OnInit, OnDestr
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseNavigationService: FuseNavigationService
+        private _troveNavigationService: TroveNavigationService
     )
     {
     }
@@ -44,10 +44,10 @@ export class FuseVerticalNavigationGroupItemComponent implements OnInit, OnDestr
     ngOnInit(): void
     {
         // Get the parent navigation component
-        // this._fuseVerticalNavigationComponent = this._fuseNavigationService.getComponent(this.name);
+        // this._troveVerticalNavigationComponent = this._troveNavigationService.getComponent(this.name);
 
         // Subscribe to onRefreshed on the navigation component
-        // this._fuseVerticalNavigationComponent.onRefreshed.pipe(
+        // this._troveVerticalNavigationComponent.onRefreshed.pipe(
         //     takeUntil(this._unsubscribeAll)
         // ).subscribe(() => {
 

@@ -1,17 +1,17 @@
 import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { FuseLoadingBarService } from '../../components/loading-bar/loading-bar.service';
+import { TroveLoadingBarService } from '../../components/loading-bar/loading-bar.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
-    selector     : 'fuse-loading-bar',
+    selector     : 'trove-loading-bar',
     templateUrl  : './loading-bar.component.html',
     styleUrls    : ['./loading-bar.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    exportAs     : 'fuseLoadingBar'
+    exportAs     : 'troveLoadingBar'
 })
-export class FuseLoadingBarComponent implements OnChanges, OnInit, OnDestroy
+export class TroveLoadingBarComponent implements OnChanges, OnInit, OnDestroy
 {
     @Input() autoMode: boolean = true;
     mode!: 'determinate' | 'indeterminate';
@@ -22,7 +22,7 @@ export class FuseLoadingBarComponent implements OnChanges, OnInit, OnDestroy
     /**
      * Constructor
      */
-    constructor(private _fuseLoadingBarService: FuseLoadingBarService)
+    constructor(private _troveLoadingBarService: TroveLoadingBarService)
     {
     }
 
@@ -41,7 +41,7 @@ export class FuseLoadingBarComponent implements OnChanges, OnInit, OnDestroy
         if ( 'autoMode' in changes )
         {
             // Set the auto mode in the service
-            // this._fuseLoadingBarService.setAutoMode(coerceBooleanProperty(changes.autoMode.currentValue));
+            // this._troveLoadingBarService.setAutoMode(coerceBooleanProperty(changes.autoMode.currentValue));
         }
     }
 
@@ -51,19 +51,19 @@ export class FuseLoadingBarComponent implements OnChanges, OnInit, OnDestroy
     ngOnInit(): void
     {
         // Subscribe to the service
-        this._fuseLoadingBarService.mode$
+        this._troveLoadingBarService.mode$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((value) => {
                 this.mode = value;
             });
 
-        this._fuseLoadingBarService.progress$
+        this._troveLoadingBarService.progress$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((value) => {
                 this.progress = value;
             });
 
-        this._fuseLoadingBarService.show$
+        this._troveLoadingBarService.show$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((value) => {
                 this.show = value;

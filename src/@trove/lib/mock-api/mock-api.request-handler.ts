@@ -1,15 +1,15 @@
 import { HttpRequest } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { take } from 'rxjs/operators';
-import { FuseMockApiReplyCallback } from '../../lib/mock-api/mock-api.types';
+import { TroveMockApiReplyCallback } from '../../lib/mock-api/mock-api.types';
 
-export class FuseMockApiHandler
+export class TroveMockApiHandler
 {
     request!: HttpRequest<any>;
     urlParams!: { [key: string]: string };
 
     // Private
-    private _reply: FuseMockApiReplyCallback = undefined;
+    private _reply: TroveMockApiReplyCallback = undefined;
     private _replyCount = 0;
     private _replied = 0;
 
@@ -79,7 +79,7 @@ export class FuseMockApiHandler
      *
      * @param callback
      */
-    reply(callback: FuseMockApiReplyCallback): void
+    reply(callback: TroveMockApiReplyCallback): void
     {
         // Store the reply
         this._reply = callback;

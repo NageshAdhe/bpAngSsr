@@ -1,4 +1,4 @@
-export class FuseMockApiUtils
+export class TroveMockApiUtils
 {
     /**
      * Constructor

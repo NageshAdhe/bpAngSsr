@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { FuseAnimationCurves, FuseAnimationDurations } from '@fuse/animations/defaults';
+import { TroveAnimationCurves, TroveAnimationDurations } from '../animations/defaults';
 
 // -----------------------------------------------------------------------------------------------------
 // @ Slide in top
@@ -25,7 +25,7 @@ const slideInTop = trigger('slideInTop',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -56,7 +56,7 @@ const slideInBottom = trigger('slideInBottom',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -87,7 +87,7 @@ const slideInLeft = trigger('slideInLeft',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -118,7 +118,7 @@ const slideInRight = trigger('slideInRight',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -149,7 +149,7 @@ const slideOutTop = trigger('slideOutTop',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )
@@ -180,7 +180,7 @@ const slideOutBottom = trigger('slideOutBottom',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )
@@ -211,7 +211,7 @@ const slideOutLeft = trigger('slideOutLeft',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )
@@ -242,7 +242,7 @@ const slideOutRight = trigger('slideOutRight',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )

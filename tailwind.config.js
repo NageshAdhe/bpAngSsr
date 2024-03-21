@@ -3,7 +3,7 @@ const path = require('path');
 const process = require('process');
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
-const generatePalette = require(path.resolve(__dirname, ('src/@trove/utils/generate-palette')));
+const generatePalette = require(path.resolve(__dirname, ('src/@trove/tailwind/plugins/utils/generate-palette')));
 const plugin = require('tailwindcss/plugin')
 
 /**
@@ -215,61 +215,61 @@ const config = {
         typography: (theme) => ({
             DEFAULT: {
                 css: {
-                    color              : 'var(--fuse-text-default)',
+                    color              : 'var(--trove-text-default)',
                     '[class~="lead"]'  : {
-                        color: 'var(--fuse-text-secondary)'
+                        color: 'var(--trove-text-secondary)'
                     },
                     a                  : {
-                        color: 'var(--fuse-primary-500)'
+                        color: 'var(--trove-primary-500)'
                     },
                     strong             : {
-                        color: 'var(--fuse-text-default)'
+                        color: 'var(--trove-text-default)'
                     },
                     'ol > li::before'  : {
-                        color: 'var(--fuse-text-secondary)'
+                        color: 'var(--trove-text-secondary)'
                     },
                     'ul > li::before'  : {
-                        backgroundColor: 'var(--fuse-text-hint)'
+                        backgroundColor: 'var(--trove-text-hint)'
                     },
                     hr                 : {
-                        borderColor: 'var(--fuse-border)'
+                        borderColor: 'var(--trove-border)'
                     },
                     blockquote         : {
-                        color          : 'var(--fuse-text-default)',
-                        borderLeftColor: 'var(--fuse-border)'
+                        color          : 'var(--trove-text-default)',
+                        borderLeftColor: 'var(--trove-border)'
                     },
                     h1                 : {
-                        color: 'var(--fuse-text-default)'
+                        color: 'var(--trove-text-default)'
                     },
                     h2                 : {
-                        color: 'var(--fuse-text-default)'
+                        color: 'var(--trove-text-default)'
                     },
                     h3                 : {
-                        color: 'var(--fuse-text-default)'
+                        color: 'var(--trove-text-default)'
                     },
                     h4                 : {
-                        color: 'var(--fuse-text-default)'
+                        color: 'var(--trove-text-default)'
                     },
                     'figure figcaption': {
-                        color: 'var(--fuse-text-secondary)'
+                        color: 'var(--trove-text-secondary)'
                     },
                     code               : {
-                        color     : 'var(--fuse-text-default)',
+                        color     : 'var(--trove-text-default)',
                         fontWeight: '500'
                     },
                     'a code'           : {
-                        color: 'var(--fuse-primary)'
+                        color: 'var(--trove-primary)'
                     },
                     pre                : {
                         color          : theme('colors.white'),
                         backgroundColor: theme('colors.gray.800')
                     },
                     thead              : {
-                        color            : 'var(--fuse-text-default)',
-                        borderBottomColor: 'var(--fuse-border)'
+                        color            : 'var(--trove-text-default)',
+                        borderBottomColor: 'var(--trove-border)'
                     },
                     'tbody tr'         : {
-                        borderBottomColor: 'var(--fuse-border)'
+                        borderBottomColor: 'var(--trove-border)'
                     },
                     'ol[type="A" s]'   : false,
                     'ol[type="a" s]'   : false,
@@ -307,6 +307,8 @@ corePlugins : {
     extend: {},
   },
   plugins: [
+      require(path.resolve(__dirname, ('src/@trove/tailwind/plugins/utilities'))),
+      require(path.resolve(__dirname, ('src/@trove/tailwind/plugins/theming')))({themes}),
       // Other third party and/or custom plugins
       require('@tailwindcss/typography')({modifiers: ['sm', 'lg']}),
       require('@tailwindcss/aspect-ratio')

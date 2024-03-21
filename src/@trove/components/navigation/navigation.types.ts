@@ -1,6 +1,6 @@
 import { IsActiveMatchOptions } from '@angular/router';
 
-export interface FuseNavigationItem
+export interface TroveNavigationItem
 {
     id?: string;
     title?: string;
@@ -12,7 +12,7 @@ export interface FuseNavigationItem
         | 'divider'
         | 'group'
         | 'spacer';
-    hidden?: (item: FuseNavigationItem) => boolean;
+    hidden?: (item: TroveNavigationItem) => boolean;
     active?: boolean;
     disabled?: boolean;
     tooltip?: string;
@@ -26,7 +26,7 @@ export interface FuseNavigationItem
         | string;
     exactMatch?: boolean;
     isActiveMatchOptions?: IsActiveMatchOptions;
-    function?: (item: FuseNavigationItem) => void;
+    function?: (item: TroveNavigationItem) => void;
     classes?: {
         title?: string;
         subtitle?: string;
@@ -38,20 +38,20 @@ export interface FuseNavigationItem
         title?: string;
         classes?: string;
     };
-    children?: FuseNavigationItem[];
+    children?: TroveNavigationItem[];
     meta?: any;
 }
 
-export type FuseVerticalNavigationAppearance =
+export type TroveVerticalNavigationAppearance =
     | 'default'
     | 'compact'
     | 'dense'
     | 'thin';
 
-export type FuseVerticalNavigationMode =
+export type TroveVerticalNavigationMode =
     | 'over'
     | 'side';
 
-export type FuseVerticalNavigationPosition =
+export type TroveVerticalNavigationPosition =
     | 'left'
     | 'right';

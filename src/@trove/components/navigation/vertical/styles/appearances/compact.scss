@@ -1,86 +1,86 @@
 /* Variables */
-$fuse-vertical-navigation-compact-width: 112;
+$trove-vertical-navigation-compact-width: 112;
 
-fuse-vertical-navigation {
+trove-vertical-navigation {
 
     /* Compact appearance overrides */
-    &.fuse-vertical-navigation-appearance-compact {
-        width: #{$fuse-vertical-navigation-compact-width}px;
-        min-width: #{$fuse-vertical-navigation-compact-width}px;
-        max-width: #{$fuse-vertical-navigation-compact-width}px;
+    &.trove-vertical-navigation-appearance-compact {
+        width: #{$trove-vertical-navigation-compact-width}px;
+        min-width: #{$trove-vertical-navigation-compact-width}px;
+        max-width: #{$trove-vertical-navigation-compact-width}px;
 
         /* Left positioned */
-        &.fuse-vertical-navigation-position-left {
+        &.trove-vertical-navigation-position-left {
 
             /* Side mode */
-            &.fuse-vertical-navigation-mode-side {
-                margin-left: -#{$fuse-vertical-navigation-compact-width}px;
+            &.trove-vertical-navigation-mode-side {
+                margin-left: -#{$trove-vertical-navigation-compact-width}px;
             }
 
             /* Opened */
-            &.fuse-vertical-navigation-opened {
+            &.trove-vertical-navigation-opened {
                 margin-left: 0;
             }
         }
 
         /* Right positioned */
-        &.fuse-vertical-navigation-position-right {
+        &.trove-vertical-navigation-position-right {
 
             /* Side mode */
-            &.fuse-vertical-navigation-mode-side {
-                margin-right: -#{$fuse-vertical-navigation-compact-width}px;
+            &.trove-vertical-navigation-mode-side {
+                margin-right: -#{$trove-vertical-navigation-compact-width}px;
             }
 
             /* Opened */
-            &.fuse-vertical-navigation-opened {
+            &.trove-vertical-navigation-opened {
                 margin-right: 0;
             }
 
             /* Aside wrapper */
-            .fuse-vertical-navigation-aside-wrapper {
+            .trove-vertical-navigation-aside-wrapper {
                 left: auto;
-                right: #{$fuse-vertical-navigation-compact-width}px;
+                right: #{$trove-vertical-navigation-compact-width}px;
             }
         }
 
         /* Wrapper */
-        .fuse-vertical-navigation-wrapper {
+        .trove-vertical-navigation-wrapper {
 
             /* Content */
-            .fuse-vertical-navigation-content {
+            .trove-vertical-navigation-content {
 
-                > fuse-vertical-navigation-aside-item,
-                > fuse-vertical-navigation-basic-item {
+                > trove-vertical-navigation-aside-item,
+                > trove-vertical-navigation-basic-item {
 
-                    .fuse-vertical-navigation-item-wrapper {
+                    .trove-vertical-navigation-item-wrapper {
                         margin: 4px 8px 0 8px;
 
-                        .fuse-vertical-navigation-item {
+                        .trove-vertical-navigation-item {
                             flex-direction: column;
                             justify-content: center;
                             padding: 12px;
                             border-radius: 6px;
 
-                            .fuse-vertical-navigation-item-icon {
+                            .trove-vertical-navigation-item-icon {
                                 margin-right: 0;
                             }
 
-                            .fuse-vertical-navigation-item-title-wrapper {
+                            .trove-vertical-navigation-item-title-wrapper {
                                 margin-top: 8px;
 
-                                .fuse-vertical-navigation-item-title {
+                                .trove-vertical-navigation-item-title {
                                     font-size: 12px;
                                     font-weight: 500;
                                     text-align: center;
                                     line-height: 16px;
                                 }
 
-                                .fuse-vertical-navigation-item-subtitle {
+                                .trove-vertical-navigation-item-subtitle {
                                     display: none !important;
                                 }
                             }
 
-                            .fuse-vertical-navigation-item-badge {
+                            .trove-vertical-navigation-item-badge {
                                 position: absolute;
                                 top: 12px;
                                 left: 64px;
@@ -88,13 +88,13 @@ fuse-vertical-navigation {
                         }
                     }
 
-                    > fuse-vertical-navigation-collapsable-item {
+                    > trove-vertical-navigation-collapsable-item {
                         display: none
                     }
 
-                    > fuse-vertical-navigation-group-item {
+                    > trove-vertical-navigation-group-item {
 
-                        > .fuse-vertical-navigation-item-wrapper {
+                        > .trove-vertical-navigation-item-wrapper {
                             display: none
                         }
                     }
@@ -103,8 +103,8 @@ fuse-vertical-navigation {
         }
 
         /* Aside wrapper */
-        .fuse-vertical-navigation-aside-wrapper {
-            left: #{$fuse-vertical-navigation-compact-width}px;
+        .trove-vertical-navigation-aside-wrapper {
+            left: #{$trove-vertical-navigation-compact-width}px;
         }
     }
 }

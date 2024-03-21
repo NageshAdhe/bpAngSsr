@@ -2,28 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { FuseLoadingBarComponent } from '../../components/loading-bar/loading-bar.component';
-import { FuseLoadingBarInterceptor } from '../../components/loading-bar/loading-bar.interceptor';
+import { TroveLoadingBarComponent } from '../../components/loading-bar/loading-bar.component';
+import { TroveLoadingBarInterceptor } from '../../components/loading-bar/loading-bar.interceptor';
 
 @NgModule({
     declarations: [
-        FuseLoadingBarComponent
+        TroveLoadingBarComponent
     ],
     imports     : [
         CommonModule,
         MatProgressBarModule
     ],
     exports     : [
-        FuseLoadingBarComponent
+        TroveLoadingBarComponent
     ],
     providers   : [
         {
             provide : HTTP_INTERCEPTORS,
-            useClass: FuseLoadingBarInterceptor,
+            useClass: TroveLoadingBarInterceptor,
             multi   : true
         }
     ]
 })
-export class FuseLoadingBarModule
+export class TroveLoadingBarModule
 {
 }

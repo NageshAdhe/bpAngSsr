@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { FuseAnimationCurves, FuseAnimationDurations } from '@fuse/animations/defaults';
+import { TroveAnimationCurves, TroveAnimationDurations } from '../animations/defaults';
 
 // -----------------------------------------------------------------------------------------------------
 // @ Zoom in
@@ -28,7 +28,7 @@ const zoomIn = trigger('zoomIn',
         transition('void => *', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )
@@ -62,7 +62,7 @@ const zoomOut = trigger('zoomOut',
         transition('* => void', animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.exiting} ${FuseAnimationCurves.acceleration}`
+                    timings: `${TroveAnimationDurations.exiting} ${TroveAnimationCurves.acceleration}`
                 }
             }
         )

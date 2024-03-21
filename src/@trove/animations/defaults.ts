@@ -1,4 +1,4 @@
-export class FuseAnimationCurves
+export class TroveAnimationCurves
 {
     static standard = 'cubic-bezier(0.4, 0.0, 0.2, 1)';
     static deceleration = 'cubic-bezier(0.0, 0.0, 0.2, 1)';
@@ -6,7 +6,7 @@ export class FuseAnimationCurves
     static sharp = 'cubic-bezier(0.4, 0.0, 0.6, 1)';
 }
 
-export class FuseAnimationDurations
+export class TroveAnimationDurations
 {
     static complex = '375ms';
     static entering = '225ms';

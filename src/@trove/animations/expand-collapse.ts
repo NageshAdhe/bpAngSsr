@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { FuseAnimationCurves, FuseAnimationDurations } from '@fuse/animations/defaults';
+import { TroveAnimationCurves, TroveAnimationDurations } from '../animations/defaults';
 
 // -----------------------------------------------------------------------------------------------------
 // @ Expand / collapse
@@ -24,7 +24,7 @@ const expandCollapse = trigger('expandCollapse',
             animate('{{timings}}'),
             {
                 params: {
-                    timings: `${FuseAnimationDurations.entering} ${FuseAnimationCurves.deceleration}`
+                    timings: `${TroveAnimationDurations.entering} ${TroveAnimationCurves.deceleration}`
                 }
             }
         )

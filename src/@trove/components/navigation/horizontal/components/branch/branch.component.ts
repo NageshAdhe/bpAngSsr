@@ -3,27 +3,27 @@ import { BooleanInput } from '@angular/cdk/coercion';
 import { MatMenu } from '@angular/material/menu';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { FuseHorizontalNavigationComponent } from '../../../../navigation/horizontal/horizontal.component';
-import { FuseNavigationService } from '../../../../navigation/navigation.service';
-import { FuseNavigationItem } from '../../../../navigation/navigation.types';
+import { TroveHorizontalNavigationComponent } from '../../../../navigation/horizontal/horizontal.component';
+import { TroveNavigationService } from '../../../../navigation/navigation.service';
+import { TroveNavigationItem } from '../../../../navigation/navigation.types';
 
 @Component({
-    selector       : 'fuse-horizontal-navigation-branch-item',
+    selector       : 'trove-horizontal-navigation-branch-item',
     templateUrl    : './branch.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FuseHorizontalNavigationBranchItemComponent implements OnInit, OnDestroy
+export class TroveHorizontalNavigationBranchItemComponent implements OnInit, OnDestroy
 {
     /* eslint-disable @typescript-eslint/naming-convention */
     static ngAcceptInputType_child: BooleanInput;
     /* eslint-enable @typescript-eslint/naming-convention */
 
     @Input() child: boolean = false;
-    @Input() item!: FuseNavigationItem;
+    @Input() item!: TroveNavigationItem;
     @Input() name!: string;
     @ViewChild('matMenu', {static: true}) matMenu!: MatMenu;
 
-    private _fuseHorizontalNavigationComponent!: FuseHorizontalNavigationComponent;
+    private _troveHorizontalNavigationComponent!: TroveHorizontalNavigationComponent;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     /**
@@ -31,7 +31,7 @@ export class FuseHorizontalNavigationBranchItemComponent implements OnInit, OnDe
      */
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
-        private _fuseNavigationService: FuseNavigationService
+        private _troveNavigationService: TroveNavigationService
     )
     {
     }
@@ -46,10 +46,10 @@ export class FuseHorizontalNavigationBranchItemComponent implements OnInit, OnDe
     ngOnInit(): void
     {
         // Get the parent navigation component
-        this._fuseHorizontalNavigationComponent = this._fuseNavigationService.getComponent(this.name);
+        this._troveHorizontalNavigationComponent = this._troveNavigationService.getComponent(this.name);
 
         // Subscribe to onRefreshed on the navigation component
-        this._fuseHorizontalNavigationComponent.onRefreshed.pipe(
+        this._troveHorizontalNavigationComponent.onRefreshed.pipe(
             takeUntil(this._unsubscribeAll)
         ).subscribe(() => {
 
